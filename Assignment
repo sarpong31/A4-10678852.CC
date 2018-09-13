@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+int gcd(int x,int y)
+{
+    if((x>=y)&&((x%y)==0))
+        return(y);
+    else
+        gcd(y,(x%y));
+}
+
+int main()
+{
+    int x,y,result;
+    cout<<"Input the first integer number:";
+    cin>>x;
+    cout<<"Input the second integer number:";
+    cin>>y;
+    result=gcd(x,y);
+    cout<<"nGCD  of "<<x<<" and "<<y<<" is "<<result;
+
+    return 0;
+}
